@@ -1,0 +1,5 @@
+name: 'SCP foundation'
+type: module
+core_version_requirement: ^9
+description: 'This displays information about the entities from the SCP foundation. This is a module for me to learn about Drupal'
+package: '05 command'
