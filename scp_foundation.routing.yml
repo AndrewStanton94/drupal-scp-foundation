@@ -1,0 +1,15 @@
+scp_foundation.simplecontent:
+  path: '/mycustompath'
+  defaults:
+    _controller: '\Drupal\scp_foundation\Controller\FirstController::simpleContent'
+    _title: 'Greatings from the 05 council'
+  requirements:
+    _permission: 'access content'
+
+scp_foundation.variablecontent:
+  path: '/assign/{name_1}/{name_2}'
+  defaults:
+    _controller: '\Drupal\scp_foundation\Controller\FirstController::variableContent'
+    _title: 'New assignment'
+  requirements:
+    _permission: 'access content'
