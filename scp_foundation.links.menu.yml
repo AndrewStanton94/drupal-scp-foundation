@@ -1,0 +1,6 @@
+scp_foundation.simplecontentpage:
+  title: Simple content link
+  description: A link to the simpleContent() method
+  route_name: scp_foundation.simplecontent
+  weight: 10
+  menu_name: main
