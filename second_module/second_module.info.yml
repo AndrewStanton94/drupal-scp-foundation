@@ -1,0 +1,10 @@
+name: 'Second module'
+type: module
+description: 'This is a second module from the acquia training. With some changes to make the project more interesting'
+core_version_requirement: ^9 || ^10
+package: '05 command'
+
+dependencies:
+  - drupal:block
+
+configuration: second_module.admin_settings
