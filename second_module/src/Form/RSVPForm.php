@@ -15,7 +15,7 @@ class RSVPForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'rsvplist_email_form'
+    return 'rsvplist_email_form';
   }
 
   /**
