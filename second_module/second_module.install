@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Handles module installation, update and uninstallation
+ */
+
+function second_module_schema() {
+  $schema['rsvplist'] = [
+    'description' => 'Stores email timestamp and IDs for RSVP',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary key of the table',
+        'type' => 'serial',
+        'size' => 'small',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'description' => 'The ID of the RSVPing user',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'nid' => [
+        'description' => 'The node that was RSVPd to',
+        'type' => 'int',
+        'unsigned' => TRUE
+        'not null' => TRUE,
+      ],
+      'mail' => [
+        'description' => 'The email of the user RSVPing',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'created' => [
+        'description' => 'Creation timestamp',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'node' => ['nid'],
+      'node_user' => ['nid', 'uid'],
+    ],
+  ];
+
+  $schema['rsvp_enabled'] = [
+    'description' => 'Is RSVP enabled for a node',
+    'fields' => [
+      'nid' => [
+        'description' => 'The ID for nodes with the RSVP list enabled',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['nid'],
+  ];
+
+  return $schema;
+}
