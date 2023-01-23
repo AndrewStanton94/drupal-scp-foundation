@@ -25,7 +25,7 @@ function second_module_schema() {
       'nid' => [
         'description' => 'The node that was RSVPd to',
         'type' => 'int',
-        'unsigned' => TRUE
+        'unsigned' => TRUE,
         'not null' => TRUE,
       ],
       'mail' => [
