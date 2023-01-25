@@ -84,7 +84,7 @@ class RSVPForm extends FormBase {
       $current_time = \Drupal::time()->getCurrentTime();
 
       // Saving the data
-      $query = \Drupal::database->insert('rsvplist');
+      $query = \Drupal::database()->insert('rsvplist');
       $query->fields([
         'uid',
         'nid',
