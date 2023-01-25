@@ -39,17 +39,17 @@ class RSVPForm extends FormBase {
       '#description' => t('We will send your updates here'),
       '#required' => TRUE,
     ];
-    
+
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => t('RSVP'),
     ];
-    
+
     $form['nid'] = [
       '#type' => 'hidden',
       '#value' => $nid,
     ];
-    
+
     return $form;
   }
 
