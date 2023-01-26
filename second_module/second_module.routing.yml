@@ -4,4 +4,4 @@ second_module.rsvp_form:
     _title: 'RSVP form'
     _form: '\Drupal\second_module\Form\RSVPForm'
   requirements:
-    _permission: 'access content'
+    _permission: 'view rsvplist'
