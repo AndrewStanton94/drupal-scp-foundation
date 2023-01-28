@@ -16,7 +16,7 @@ use Drupal\Core\Access\AccessResult;
  *
  * @Block(
  *   id = "rsvp_block",
- *   admin_label = @Translation("The RSVP Block")
+ *   admin_label = @Translation("The RSVP Block"),
  * )
  */
 class RSVPBlock extends BlockBase {
