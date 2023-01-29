@@ -5,7 +5,7 @@
  * Creates a block which displays the RSVPForm
  */
 
-namespace Drupal\second_module\Form\Block;
+namespace Drupal\second_module\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
