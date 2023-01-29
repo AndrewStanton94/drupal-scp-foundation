@@ -26,9 +26,22 @@ class RSVPBlock extends BlockBase {
    */
   public function build() {
 
-    return [
-      '#type' => 'markup',
-      '#markup' => $this->t('My RSVP block list'),
-    ];
+    // return [
+    //  '#type' => 'markup',
+    //  '#markup' => $this->t('My RSVP block list'),
+    // ];
+    return \Drupal::formBuilder()->getForm('Drupal\second_module\Form\RSVPForm');
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockAccess(AccountInterface $account) {
+    $node = \Drupal::routeMatch()->getParameter('node');
+
+    if ( !(is_null($node)) ) {
+      return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
+    }
+    return AccessResult::forbidden();
   }
 }
