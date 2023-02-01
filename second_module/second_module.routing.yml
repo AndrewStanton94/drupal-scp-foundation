@@ -5,3 +5,11 @@ second_module.rsvp_form:
     _form: '\Drupal\second_module\Form\RSVPForm'
   requirements:
     _permission: 'view rsvplist'
+
+rsvplist.admin_settings:
+  path: '/admin/config/content/rsvplist'
+  defaults:
+    _title: 'RSVP list settings'
+    _form: '\Drupal\second_module\Form\RSVPSettingsForm'
+  requirements:
+    _permission: 'administer rsvplist'
