@@ -49,7 +49,7 @@ function second_module_schema() {
     ],
   ];
 
-  $schema['rsvp_enabled'] = [
+  $schema['rsvplist_enabled'] = [
     'description' => 'Is RSVP enabled for a node',
     'fields' => [
       'nid' => [

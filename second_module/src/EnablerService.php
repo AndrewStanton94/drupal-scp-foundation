@@ -71,7 +71,7 @@ class EnablerService {
    */
   public function delEnabled(Node $node) {
     try {
-      $delete = $this->database_connection->delete('rsvp_enabled');
+      $delete = $this->database_connection->delete('rsvplist_enabled');
       $delete->condition('nid', $node->id());
       $delete->execute();
     }
