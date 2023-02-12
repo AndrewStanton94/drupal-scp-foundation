@@ -34,7 +34,7 @@ class EnablerService {
       $select->condition('nid', $node->id());
       $results = $select->execute();
 
-      return !(empty($results->fetchCol());
+      return !(empty($results->fetchCol()));
     }
     catch (\Exception $e) {
       \Drupal::messenger()->addError(
